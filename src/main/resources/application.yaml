@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: abbtech-application-api-gw
+  main:
+    banner-mode: off
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: freelance-user-ms
+            uri: http://127.0.0.1:8081
+            predicates:
+              - Path=/api/v1/user-svc/**
+            filters:
+              - RewritePath=/api/v1/user-svc/(?<segment>.*), /api/v1/user-ms/$\{segment}
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    reactor.netty.http.client: TRACE

@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "c3897a90-f706-4648-9d38-6d03d5e6f1ef",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28884384"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"New book\",\r\n  \"author\": \"John Smith\",\r\n  \"price\": 20.99\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/books/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/books/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-USER-ID",
+						"value": "6f204b29-f13f-4761-8e98-a5989d60995c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bookId\": \"29c3a368-2546-44bc-8231-c5ac9799964d\",\r\n  \"quantity\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/orders/createOrder",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"createOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/orders/eb140432-d0ae-4914-b063-b5935d743e30",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"eb140432-d0ae-4914-b063-b5935d743e30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-USER-ID",
+						"value": "6f204b29-f13f-4761-8e98-a5989d60995c",
+						"type": "text"
+					},
+					{
+						"key": "X-USER-EMAIL",
+						"value": "yasar@gmail.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/orders/bc88b11a-b919-439b-9b3a-dce49a2a851c/confirmOrder",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"bc88b11a-b919-439b-9b3a-dce49a2a851c",
+						"confirmOrder"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
